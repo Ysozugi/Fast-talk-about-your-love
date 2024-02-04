@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Love Fast Talk</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 50px;
+        }
+        #topicDisplay {
+            font-size: 18px;
+            margin-bottom: 20px;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <h1>Love Fast Talk</h1>
+    <div id="topicDisplay"></div>
+    <button onclick="generateTopic()">Generate Topic</button>
+
+    <script>
+        const fastTalkTopics = [
+            "Describe your love in three words",
+            "If your love walked in right now, what would you say?",
+            "Your favorite memory with your love",
+            "One thing you'd love to do together with your love",
+            "What song reminds you of your love?"
+            // Add more fast talk topics as needed
+        ];
+
+        function generateTopic() {
+            const randomIndex = Math.floor(Math.random() * fastTalkTopics.length);
+            const generatedTopic = fastTalkTopics[randomIndex];
+            document.getElementById("topicDisplay").innerText = generatedTopic;
+        }
+    </script>
+</body>
+</html>
